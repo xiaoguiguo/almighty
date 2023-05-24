@@ -1,0 +1,12 @@
+server:
+  port: 8085
+springdoc:
+  api-docs:
+    enabled: true
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+  # 配置需要生成接口文档的扫描包
+  packages-to-scan: com.test.doc.controller
+  # 配置需要生成接口文档的接口路径
+  paths-to-match: /test/**,/admin/**
