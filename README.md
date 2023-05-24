@@ -1,2 +1,11 @@
 # almighty
-java/spring/springboot/springcloud/mybatis(plus)/mysql/mq/redis/and so on
+java
+Spring
+Springboot
+SpringCloud
+SpringCloudAlibaba
+Mybatis(plus)
+mysql
+mq
+redis
+等等java学习，技术框架使用学习
