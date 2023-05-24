@@ -29,4 +29,5 @@ pluginManagement {
 }
 rootProject.name = 'almighty'
 include 'spring-family'
+include 'multi-datasource'
 

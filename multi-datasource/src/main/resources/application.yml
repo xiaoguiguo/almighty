@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    dynamic:
+      primary: source
+      datasource:
+        source:
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          url: jdbc:mysql://localhost:3306/dev?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowMultiQueries=true&serverTimezone=Asia/Shanghai
+          username: dev1
+          password: 123456
+        goal:
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          url: jdbc:mysql://localhost:3306/dev2?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowMultiQueries=true&serverTimezone=Asia/Shanghai
+          username: dev2
+          password: 123456
