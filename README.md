@@ -1,20 +1,42 @@
 # almighty
-java
-Spring
-Springboot
-SpringCloud
-SpringCloudAlibaba
-Mybatis(plus)
-mysql
-mq
-redis
-disruptor 内存队列
-等等java学习，技术框架使用学习
+1. java
+2. Springboot
+3. SpringCloud
+4. SpringCloudAlibaba
+5. Mybatis(plus)
+6. mysql
+7. mq
+8. redis
+9. disruptor 内存队列
+10. 过期时间监听：
+    使用 RocketMQ、RabbitMQ、Pulsar 等消息队列的延时投递功能 
+    使用 Redisson 提供的 DelayedQueue
+11. AK/SK
+12. RSA非对称加密的使用
+13. netty
+14. RSocket/VertX
+15. 操作linux
+16. Excel工具类实现
+17. Zip工具类实现
+18. 白名单、网络代理
+19. websocket
+20. JWT实现
+21. SpringSecurity+Redis(session共享)
+22. Spring enabled系列
+23. 分布式（分布式id，分布式事务）
+24. 全文检索（es）
+25. PostgreSQL
+26. MongoDB
+27. 待补充...
 
 ## TODO List
-mysql
-mybatis-plus
-page-helper
+### SpringBoot
+1. mysql
+2. mybatis-plus
+3. page-helper
+4. kafka
+5. rabbitmq
+6. rocketmq
 
 ## Complete List
 ### SpringBoot
