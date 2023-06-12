@@ -25,12 +25,14 @@
 22. Spring enabled系列
 23. 分布式（分布式id，分布式事务）
 24. 全文检索（es）
-25. PostgreSQL
-26. MongoDB
-27. 搭建docker仓库
-28. 搭建mvn仓库
-29. jenkins: unit_test/dependency_check/sonarqube/上传docker image/deploy/auto_test
-30. 待补充...
+25. 高可用
+26. 高并发
+27. PostgreSQL
+28. MongoDB
+29. 搭建docker仓库
+30. 搭建mvn仓库
+31. jenkins: unit_test/dependency_check/sonarqube/上传docker image/deploy/auto_test
+32. 待补充...
 
 ## TODO List
 ### SpringBoot
