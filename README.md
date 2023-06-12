@@ -26,6 +26,7 @@ page-helper
 6. 添加重试机制模板 {retry}
 7. Servlet生命周期 {lifecycle}
 8. 定时任务的使用模板 {scheduler}
+9. SpringDoc api文档 {apidoc}
 ### SpringCloud
 ### Java
 ### Common
