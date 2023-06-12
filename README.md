@@ -27,7 +27,10 @@
 24. 全文检索（es）
 25. PostgreSQL
 26. MongoDB
-27. 待补充...
+27. 搭建docker仓库
+28. 搭建mvn仓库
+29. jenkins: unit_test/dependency_check/sonarqube/上传docker image/deploy/auto_test
+30. 待补充...
 
 ## TODO List
 ### SpringBoot
