@@ -2,6 +2,7 @@ package com.test.spring.scheduler;
 /*
  * Spring 定时任务实现
  * @EnableScheduling 注解开启定时任务
+ * ExecTaskScheduler 动态修改定时任务
  *
  * 常用cron表达式例子
  * （1）0/2 * * * * ?   表示每2秒 执行任务
