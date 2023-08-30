@@ -24,11 +24,8 @@ spring:
     password: 123456
 
 scheduler:
-  # 每5秒执行一次任务
+  # 每15秒执行一次任务
   execTaskCron: 0/15 * * * * ?
-
-  spring.task.scheduling.pool.size=10
-  spring.task.scheduling.thread-name-prefix=task-test
 
 # 没有使用pageHelper作为分页工具，下面这部分内容忽略，也可自行改造成使用pageHelper完成分页功能
 # helperDialect ：指定数据库，可以不配置，pagehelper插件会自动检测数据库的类型。
