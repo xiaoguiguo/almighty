@@ -4,15 +4,19 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.SchedulingConfigurer;
 import org.springframework.scheduling.config.ScheduledTaskRegistrar;
 import org.springframework.scheduling.support.CronTrigger;
 import org.springframework.stereotype.Component;
 
 import java.time.Instant;
+import java.util.concurrent.Executor;
+import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
-@Component
+@Configuration
 @Slf4j
 @Getter
 @Setter
@@ -34,6 +38,13 @@ public class ExecTaskScheduler implements SchedulingConfigurer {
             CronTrigger cronTrigger = new CronTrigger(execTaskCron);
             return cronTrigger.nextExecutionTime(triggerContext);
         });
+
+        taskRegistrar.setScheduler(getExecutor());
+    }
+
+    @Bean
+    public Executor getExecutor(){
+        return new ScheduledThreadPoolExecutor(5);
     }
 
     private void sleepSecond(long i) {
