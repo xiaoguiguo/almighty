@@ -1,6 +1,7 @@
 package com.test.spring.scheduler;
 
 import org.junit.Test;
+import org.springframework.scheduling.annotation.Scheduled;
 
 import java.time.Instant;
 import java.time.LocalDateTime;
@@ -13,8 +14,9 @@ import java.util.concurrent.TimeUnit;
 
 public class SchedulerTest {
 
+
     public static void main(String[] args) {
-        ScheduledExecutorService ses = Executors.newScheduledThreadPool(5);
+        ScheduledExecutorService ses = Executors.newScheduledThreadPool(1);
         // 按照固定频率执行，每隔3秒跑一次
         ses.scheduleAtFixedRate(new Runnable() {
             @Override
@@ -35,15 +37,17 @@ public class SchedulerTest {
                     + Thread.currentThread().getName() + "随机数 " + i);
             }
         }, 2, 10, TimeUnit.SECONDS);
+        // 异常情况
+        ses.scheduleWithFixedDelay(new Runnable() {
+            @Override
+            public void run() {
+                goSleep(15);
+                System.out.println(Instant.now() + " : exception " + Thread.currentThread().getName());
+                int i = 1/0;
+            }
+        }, 10, 10, TimeUnit.SECONDS);
     }
 
-    private static void goSleep(long i) {
-        try {
-            TimeUnit.SECONDS.sleep(i);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-    }
 
     //    public static void main(String[] args) {
     //        TimerTask timerTask0 = new TimerTask() {
@@ -77,8 +81,15 @@ public class SchedulerTest {
     //            }
     //        };
     //        Timer timer = new Timer();
-    //        timer.schedule(timerTask0, 5, 3000);
+    //        timer.schedule(timerTask0, 5, 20000);
     //        timer.schedule(timerTask1, 15, 3000);
     //    }
 
+    private static void goSleep(long i) {
+        try {
+            TimeUnit.SECONDS.sleep(i);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
 }
